@@ -29,9 +29,9 @@ function hover() {
         grid.addEventListener("mouseover", function(e){
             grid.style.backgroundColor = "red";
         })
-        grid.addEventListener("mouseout", function(e){
-            grid.style.backgroundColor = "white";
-        })
+        // grid.addEventListener("mouseout", function(e){
+        //     grid.style.backgroundColor = "white";
+        // })
     })
 }
 
