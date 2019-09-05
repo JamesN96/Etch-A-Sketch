@@ -1,4 +1,6 @@
 let container = document.getElementById("container");
+let grids = document.querySelectorAll(".grid");
+let clearbtn = document.getElementById("clear");    
 
 for(let i = 0; i < 4; i++) {
     for(let j = 0; j < 4; j++) {
@@ -12,7 +14,6 @@ for(let i = 0; i < 4; i++) {
 };
 
 
-let grids = document.querySelectorAll(".grid");
 
 grids.forEach(function(grid){
     grid.addEventListener("mouseover", function(e){
@@ -21,4 +22,9 @@ grids.forEach(function(grid){
     grid.addEventListener("mouseout", function(e){
         grid.style.backgroundColor = "white";
     })
+})
+
+
+clearbtn.addEventListener("click", function(e){
+    container.innerHTML = "";
 })
