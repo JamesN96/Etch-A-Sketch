@@ -11,7 +11,7 @@ function createGrid() {
             let div = document.createElement("div");
             div.style.width = "1fr";
             div.style.height = "1fr ";
-            div.style.border = "1px solid green";
+            div.style.border = "1px solid black";
             div.className = "grid";
             container.style.gridTemplateColumns = "repeat(" + column + ", 1fr";
             container.style.gridTemplateRows = "repeat(" + row + ", 1fr";
