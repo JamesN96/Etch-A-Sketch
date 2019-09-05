@@ -1,9 +1,7 @@
 let container = document.getElementById("container");
-let grids = document.querySelectorAll(".grid");
 let clearbtn = document.getElementById("clear");    
 
-
-let row = 4;
+let row = 4; 
 let column = 4;
 createGrid();
 
@@ -22,22 +20,26 @@ function createGrid() {
     };
 }
 
+hover();
 
+function hover() {
+    let grids = document.querySelectorAll(".grid");
 
-
-grids.forEach(function(grid){
-    grid.addEventListener("mouseover", function(e){
-        grid.style.backgroundColor = "red";
+    grids.forEach(function(grid){
+        grid.addEventListener("mouseover", function(e){
+            grid.style.backgroundColor = "red";
+        })
+        grid.addEventListener("mouseout", function(e){
+            grid.style.backgroundColor = "white";
+        })
     })
-    grid.addEventListener("mouseout", function(e){
-        grid.style.backgroundColor = "white";
-    })
-})
-
+}
 
 clearbtn.addEventListener("click", function(e){
-    container.innerHTML = "";
+    container.innerHTML = " ";
     row = prompt("Enter number of rows");
     column = prompt("Enter number of columns");
     createGrid();
+    hover();
 })
+
