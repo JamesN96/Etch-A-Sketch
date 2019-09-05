@@ -2,16 +2,26 @@ let container = document.getElementById("container");
 let grids = document.querySelectorAll(".grid");
 let clearbtn = document.getElementById("clear");    
 
-for(let i = 0; i < 4; i++) {
-    for(let j = 0; j < 4; j++) {
-        let div = document.createElement("div");
-        div.style.width = "1fr";
-        div.style.height = "1fr ";
-        div.style.border = "1px solid green";
-        div.className = "grid";
-        container.appendChild(div);
-    }
-};
+
+let row = 4;
+let column = 4;
+createGrid();
+
+function createGrid() {
+    for(let i = 0; i < row; i++) {
+        for(let j = 0; j < column; j++) {
+            let div = document.createElement("div");
+            div.style.width = "1fr";
+            div.style.height = "1fr ";
+            div.style.border = "1px solid green";
+            div.className = "grid";
+            container.style.gridTemplateColumns = "repeat(" + column + ", 1fr";
+            container.style.gridTemplateRows = "repeat(" + row + ", 1fr";
+            container.appendChild(div);
+        }
+    };
+}
+
 
 
 
@@ -27,4 +37,7 @@ grids.forEach(function(grid){
 
 clearbtn.addEventListener("click", function(e){
     container.innerHTML = "";
+    row = prompt("Enter number of rows");
+    column = prompt("Enter number of columns");
+    createGrid();
 })
