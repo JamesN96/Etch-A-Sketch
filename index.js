@@ -1,10 +1,14 @@
+//Selectors
 let container = document.getElementById("container");
 let clearbtn = document.getElementById("clear");    
 
+
+// Initialise variables for creating number of grids
 let row = 4; 
 let column = 4;
 createGrid();
 
+// This function will create the grid squares inside the container div
 function createGrid() {
     for(let i = 0; i < row; i++) {
         for(let j = 0; j < column; j++) {
@@ -22,6 +26,7 @@ function createGrid() {
 
 hover();
 
+// This function adds a hover effect when mouse is over the grid sqaure
 function hover() {
     let grids = document.querySelectorAll(".grid");
 
@@ -35,6 +40,7 @@ function hover() {
     })
 }
 
+// Event listener to reset the grid and create a new grid of a different size
 clearbtn.addEventListener("click", function(e){
     container.innerHTML = " ";
     row = prompt("Enter number of rows");
