@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <button id="clear">Clear</button>
-    <button id="rgb">Random Colors</button>
+        <nav class="navbar navbar-light bg-light justify-content-center">
+                <form class="form-inline">
+                  <button id="clear" class="btn btn-outline-success" type="button">Reset Grid</button>
+                  <button id="rgb" class="btn btn-outline-success" type="button">Random Colors</button>
+                </form>
+              </nav>
     <h1>Etch-A-Sketch!</h1>
     <div id="container"></div>
     
